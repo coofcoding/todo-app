@@ -1,19 +1,73 @@
-<section class="grid place-content-center h-screen">
+<section class="grid place-content-center min-h-screen">
     <header class="text-center">
         <h1
-            class="text-6xl font-semibold text-center bg-gradient-to-r from-pink-400 to-sky-400 inline-block text-transparent bg-clip-text">
-            TODO List</h1>
+            class="text-6xl font-bold text-center mt-10 bg-gradient-to-r from-pink-400 to-sky-400 inline-block text-transparent bg-clip-text">
+            TO-DO List</h1>
     </header>
-    <div class="bg-white rounded-3xl my-10 w-screen max-w-screen-lg py-5 px-10 shadow-xl">
+    <div class="bg-white rounded-3xl my-10 w-screen max-w-screen-lg pt-5 px-10 shadow-xl">
         <form method="dialog" class="flex row items-center w-full relative">
             <input
-                class="w-full outline-none rounded-lg bg-slate-100 border-slate-300 border-2 p-4 font-semibold text-slate-500 placeholder-slate-300 hover:border-slate-400 transition-all duration-100 focus:border-pink-400 focus:bg-white focus:shadow-lg focus:shadow-pink-100 focus:border-2"
+                id="new-todo-input"
+                class="w-full pr-20 outline-none rounded-lg bg-slate-100 border-slate-300 border-2 p-4 font-semibold text-slate-500 placeholder-slate-300 hover:border-slate-400 transition-all duration-100 focus:border-pink-400 focus:bg-white focus:shadow-md focus:shadow-pink-100 focus:border-2"
                 type="text" placeholder="¿Que necesitas hacer hoy?" autofocus>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-9 h-9 absolute right-0 mr-6 stroke-2 stroke-slate-500 bg-slate-100 border border-slate-300 rounded-md p-2 cursor-pointer">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
-            </svg>
-
+            <button
+                class="cursor-pointer bg-slate-100 border border-slate-300 rounded-md p-2 absolute right-0 mr-6 shadow-md"
+                type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5 stroke-2 stroke-slate-500">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                </svg>
+            </button>
         </form>
+
+        <ul id="todoEnlistener" class="mt-5 *:my-3">
+            <!-- <li class="flex row w-full items-center relative">
+                <label for="option-1" class="w-full">
+                    <input id="option-1" type="checkbox" class="hidden peer" />
+                    <div
+                    class="flex items-center gap-2 p-4 border-2 border-slate-200 rounded-lg font-light duration-150 text-slate-400 peer-checked:border-slate-400 peer-checked:bg-slate-200 *:peer-checked:opacity-100 peer-checked:text-slate-400 peer-checked:line-through text-xl cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 opacity-0">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                      
+                    Probar JavaScript
+                    </div>
+                </label>
+                <button class="right-0 mr-6 absolute">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6 stroke-2 stroke-slate-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </li> -->
+            
+        </ul>
+
+        <footer class="flex items-center justify-between flex-col *:w-fit min-[900px]:flex-row my-5">
+            <span class="text-slate-300 font-medium text-sm">0 pendiente(s)</span>
+            <ul
+                class="grid min-[750px]:grid-flow-col text-center max-[750px]:w-full mt-3 gap-4 *:border-2 *:border-slate-300 *:py-3 lg:*:py-2 *:px-4 *:rounded-lg font-medium text-slate-400 *:cursor-pointer *:duration-150">
+                <li
+                    class="bg-gradient-to-r from-sky-400 to-blue-400 text-white border-none shadow-lg hover:scale-105 hover:from-pink-400 hover:to-fuchsia-400">
+                    todos</li>
+                <li
+                    class="bg-gradient-to-r bg-slate-100 hover:text-pink-400 hover:border-pink-300 hover:scale-105 hover:bg-white">
+                    pendientes</li>
+                <li
+                    class="bg-gradient-to-r bg-slate-100 hover:text-pink-400 hover:border-pink-300 hover:scale-105 hover:bg-white">
+                    completados</li>
+                <li
+                    class="bg-gradient-to-r bg-slate-100 hover:text-pink-400 hover:border-pink-300 hover:scale-105 hover:bg-white">
+                    borrar completados</li>
+            </ul>
+        </footer>
     </div>
+    <footer class="text-center mb-8">
+        <p class="text-base text-slate-400">Desarrollado y diseñado con 💟 por
+            <a href="https://github.com/coofcoding" target="_blank" rel="noopener noreferrer" class="ml-2 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+                <span class="relative text-white">coofcoding.</span>
+            </a>
+        </p>
+    </footer>
 </section>
