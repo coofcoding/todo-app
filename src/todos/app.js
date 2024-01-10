@@ -18,6 +18,8 @@ const elementIDs = {
  */
 export const App = (elementId) => {
 
+    todoStore.setFilter(Filters.All);
+
     const displayTodos = () => {
         const todos = todoStore.getTodos(todoStore.getCurrentFilter());
         renderTodos(elementIDs.TodoList, todos);
@@ -114,14 +116,14 @@ export const App = (elementId) => {
             element.target.classList.remove("bg-slate-100", "hover:text-pink-400", "hover:border-pink-300", "hover:scale-105", "hover:bg-white");
             element.target.classList.add("from-sky-400", "to-blue-400", "text-white", "border-none", "shadow-lg", "hover:scale-105", "hover:from-pink-400", "hover:to-fuchsia-400");
 
-            switch (element.target.textContent) {
-                case 'todos':
+            switch (element.target.getAttribute('id')) {
+                case 'all-todos':
                     todoStore.setFilter(Filters.All);
                     break;
-                case 'pendientes':
+                case 'pending-todos':
                     todoStore.setFilter(Filters.Pending);
                     break;
-                case 'completados':
+                case 'completed-todos':
                     todoStore.setFilter(Filters.Completed);
                     break;
             }
